@@ -1,13 +1,31 @@
 import { useLanguageStore } from "../../store/language.store";
+import { useTranslation } from "react-i18next";
 
 const LanguageSwitcher = () => {
+  const { i18n } = useTranslation();
+
   const { language, setLanguage } =
     useLanguageStore();
+
+  const handleLanguageChange = (
+  lang: "en" | "hi"
+) => {
+  setLanguage(lang);
+
+  i18n.changeLanguage(lang);
+
+  document.body.className =
+    lang === "hi"
+      ? "hindi-font"
+      : "english-font";
+};
 
   return (
     <div className="flex items-center gap-2">
       <button
-        onClick={() => setLanguage("en")}
+        onClick={() =>
+          handleLanguageChange("en")
+        }
         className={`
           px-3 py-1 rounded-md text-sm font-medium
           transition-colors
@@ -22,7 +40,9 @@ const LanguageSwitcher = () => {
       </button>
 
       <button
-        onClick={() => setLanguage("hi")}
+        onClick={() =>
+          handleLanguageChange("hi")
+        }
         className={`
           px-3 py-1 rounded-md text-sm font-medium
           transition-colors

@@ -1,6 +1,13 @@
 import Navbar from "../components/navigation/Navbar";
 import MobileDrawer from "../components/navigation/MobileDrawer";
 
+import HeroSection from "../components/layout/HeroSection";
+import AnnouncementSection from "../components/layout/AnnouncementSection";
+
+import ServiceCard from "../components/cards/ServiceCard";
+
+import { services } from "../constants/services";
+
 const HomePage = () => {
   return (
     <div className="min-h-screen bg-slate-50">
@@ -9,21 +16,41 @@ const HomePage = () => {
 
       <MobileDrawer />
 
-      <main className="max-w-7xl mx-auto px-4 py-10">
+      <main className="max-w-7xl mx-auto px-4 py-8">
 
-        <div className="bg-white rounded-3xl p-10 shadow-sm border border-slate-100">
+        <HeroSection />
 
-          <h1 className="text-5xl font-bold text-slate-900">
-            VAHAN Citizen Services
-          </h1>
+        {/* Services */}
+        <section className="mt-14">
 
-          <p className="mt-5 text-lg text-slate-600 max-w-3xl">
-            Modernized vehicle and transport
-            services portal with multilingual
-            accessibility and responsive citizen
-            experience.
-          </p>
-        </div>
+          <div className="flex items-center justify-between">
+            <h2 className="text-3xl font-bold text-slate-900">
+              Popular Services
+            </h2>
+          </div>
+
+          <div
+            className="
+              mt-8
+              grid
+              grid-cols-1
+              md:grid-cols-2
+              lg:grid-cols-3
+              gap-6
+            "
+          >
+            {services.map((service) => (
+              <ServiceCard
+                key={service.title}
+                title={service.title}
+                description={service.description}
+                icon={service.icon}
+              />
+            ))}
+          </div>
+        </section>
+
+        <AnnouncementSection />
       </main>
     </div>
   );
