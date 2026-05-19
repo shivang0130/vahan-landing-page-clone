@@ -1,8 +1,12 @@
+import TopStrip from "../components/layout/TopStrip";
 import Navbar from "../components/navigation/Navbar";
 import MobileDrawer from "../components/navigation/MobileDrawer";
 
 import HeroSection from "../components/layout/HeroSection";
+import StatsSection from "../components/layout/StatsSection";
+import QuickLinks from "../components/layout/QuickLinks";
 import AnnouncementSection from "../components/layout/AnnouncementSection";
+import Footer from "../components/layout/Footer";
 
 import ServiceCard from "../components/cards/ServiceCard";
 
@@ -12,6 +16,8 @@ const HomePage = () => {
   return (
     <div className="min-h-screen bg-slate-50">
 
+      <TopStrip />
+
       <Navbar />
 
       <MobileDrawer />
@@ -19,6 +25,8 @@ const HomePage = () => {
       <main className="max-w-7xl mx-auto px-4 py-8">
 
         <HeroSection />
+
+        <StatsSection />
 
         {/* Services */}
         <section className="mt-14">
@@ -50,8 +58,12 @@ const HomePage = () => {
           </div>
         </section>
 
+        <QuickLinks />
+
         <AnnouncementSection />
       </main>
+
+      <Footer />
     </div>
   );
 };

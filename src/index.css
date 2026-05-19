@@ -14,3 +14,20 @@ body.english-font {
 body.hindi-font {
   font-family: "Noto Sans Devanagari", sans-serif;
 }
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
