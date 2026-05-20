@@ -73,6 +73,8 @@ npm run dev
 
 Deployed using Vercel.
 
+https://vahan-landing-page-clone.vercel.app/
+
 ## Commit History
 
 The project was developed using iterative feature-based commits following a modular frontend engineering workflow.
