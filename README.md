@@ -1,73 +1,78 @@
-# React + TypeScript + Vite
+# VAHAN Landing Page Clone
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Modern multilingual recreation of the VAHAN citizen services landing page built using React, TypeScript, Zustand, Tailwind CSS, and react-i18next.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- React.js
+- TypeScript
+- Vite
+- Tailwind CSS
+- Zustand
+- react-i18next
+- Framer Motion
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Responsive UI
+- Working dropdown navigation
+- Multilingual support
+- Dynamic font switching
+- Mobile navigation drawer
+- Reusable component architecture
+- Accessibility improvements
+- Modernized government portal UI
 
-## Expanding the ESLint configuration
+## Responsiveness Approach
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+The application uses a responsive component-based architecture powered by Tailwind CSS breakpoints. Layouts adapt progressively across mobile, tablet, and desktop devices using flexible grids and responsive spacing systems.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## State Management Approach
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Zustand was used for lightweight global state management, specifically for:
+- navigation dropdown state
+- mobile drawer state
+- language selection
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+This avoided unnecessary prop drilling while keeping the architecture scalable and maintainable.
+
+## Multilingual Strategy
+
+react-i18next was implemented using locale-based translation JSON files. The architecture keeps UI components language-agnostic and scalable for additional languages.
+
+## Dynamic Fonts Strategy
+
+Dynamic font switching was implemented based on selected locale:
+- Inter → English
+- Noto Sans Devanagari → Hindi
+
+This ensures proper readability and typography consistency across languages.
+
+## Code Structure
+
+```txt
+src/
+├── components/
+├── constants/
+├── layouts/
+├── locales/
+├── pages/
+├── store/
+├── styles/
+├── utils/
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Installation
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+npm run dev
 ```
+
+## Deployment
+
+Deployed using Vercel.
+
+## Commit History
+
+The project was developed using iterative feature-based commits following a modular frontend engineering workflow.
