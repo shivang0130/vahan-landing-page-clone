@@ -1,21 +1,21 @@
 const stats = [
   {
     label: "Registered Vehicles",
-    value: "32M+",
+    value: "32Cr+",
   },
 
   {
     label: "Daily Transactions",
-    value: "120K+",
+    value: "1.2L+",
   },
 
   {
-    label: "Active Services",
+    label: "Citizen Services",
     value: "85+",
   },
 
   {
-    label: "States Connected",
+    label: "Connected States",
     value: "28",
   },
 ];

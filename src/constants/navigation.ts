@@ -9,27 +9,75 @@ export interface NavItem {
 
 export const navigationItems: NavItem[] = [
   {
-    label: "Online Services",
+    label: "Vehicle Services",
+
     children: [
-      { label: "Vehicle Registration", href: "#" },
-      { label: "Fancy Number Booking", href: "#" },
-      { label: "Tax Payment", href: "#" },
+      {
+        label: "New Vehicle Registration",
+        href: "#",
+      },
+
+      {
+        label: "Duplicate RC",
+        href: "#",
+      },
+
+      {
+        label: "Transfer of Ownership",
+        href: "#",
+      },
+
+      {
+        label: "NOC Services",
+        href: "#",
+      },
     ],
   },
+
   {
-    label: "Informational Services",
+    label: "Permit Services",
+
     children: [
-      { label: "RC Status", href: "#" },
-      { label: "DL Services", href: "#" },
-      { label: "Permit Details", href: "#" },
+      {
+        label: "National Permit",
+        href: "#",
+      },
+
+      {
+        label: "Temporary Permit",
+        href: "#",
+      },
+
+      {
+        label: "Permit Renewal",
+        href: "#",
+      },
     ],
   },
+
+  {
+    label: "Online Services",
+
+    children: [
+      {
+        label: "Tax Payment",
+        href: "#",
+      },
+
+      {
+        label: "Fancy Number Booking",
+        href: "#",
+      },
+
+      {
+        label: "RC Status",
+        href: "#",
+      },
+    ],
+  },
+
   {
     label: "Dashboard",
-    href: "#",
-  },
-  {
-    label: "Contact",
     href: "#",
   },
 ];

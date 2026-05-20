@@ -4,49 +4,61 @@ import {
   FileText,
   ShieldCheck,
   Search,
-  LayoutDashboard,
+  ClipboardCheck,
 } from "lucide-react";
 
 export const services = [
   {
     title: "Vehicle Registration",
+
     description:
-      "Register and manage vehicle information.",
+      "Apply for new vehicle registration and manage ownership records.",
+
     icon: Car,
   },
 
   {
-    title: "Tax Payment",
+    title: "Road Tax Payment",
+
     description:
-      "Pay road tax and related charges online.",
+      "Pay state and transport-related taxes securely online.",
+
     icon: BadgeIndianRupee,
   },
 
   {
-    title: "Permit Services",
+    title: "Permit Applications",
+
     description:
-      "Apply and track transport permits.",
+      "Apply and renew transport permits digitally.",
+
     icon: FileText,
   },
 
   {
-    title: "Vehicle Verification",
+    title: "RC Verification",
+
     description:
-      "Verify ownership and registration details.",
+      "Verify registration certificate and ownership information.",
+
     icon: ShieldCheck,
   },
 
   {
-    title: "Search Services",
+    title: "Application Tracking",
+
     description:
-      "Track applications and service requests.",
+      "Track current service requests and approval status.",
+
     icon: Search,
   },
 
   {
-    title: "Dashboard",
+    title: "Fitness Certification",
+
     description:
-      "View service metrics and activity.",
-    icon: LayoutDashboard,
+      "Manage commercial vehicle fitness certification services.",
+
+    icon: ClipboardCheck,
   },
 ];

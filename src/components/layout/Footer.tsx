@@ -18,17 +18,22 @@ const Footer = () => {
         "
       >
         <div>
-          <h3 className="text-xl font-bold text-white">
-            VAHAN
-          </h3>
+  <h3 className="text-xl font-bold text-white">
+    VAHAN Citizen Services
+  </h3>
 
-          <p className="mt-4 text-sm leading-relaxed">
-            Smart vehicle and transport
-            citizen services platform designed
-            with accessibility and scalability
-            in mind.
-          </p>
-        </div>
+  <p className="mt-4 text-sm leading-relaxed">
+    Integrated transport and vehicle
+    administration platform supporting
+    digital governance initiatives and
+    citizen-focused public services.
+  </p>
+
+  <p className="mt-4 text-xs text-slate-500">
+    Ministry of Road Transport &
+    Highways, Government of India
+  </p>
+</div>
 
         <div>
           <h4 className="font-semibold text-white">
